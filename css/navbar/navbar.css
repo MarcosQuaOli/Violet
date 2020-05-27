@@ -1,0 +1,14 @@
+.navbar {
+  background-color: transparent;
+}
+
+.navbar--center {
+  text-align: center;
+}
+
+.navbar__link {
+  display: block;
+  padding: .5rem;
+  color: rgba(255, 255, 255, .7);
+  text-transform: uppercase;
+}

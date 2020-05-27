@@ -1,0 +1,43 @@
+.btn {
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  margin-top: 1rem;
+  border-radius: 1.5rem;
+  font-weight: bold;
+  font-size: .9rem;
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+}
+
+.btn--size_sm {
+  padding: .5rem 1rem;
+}
+
+.btn--size_md {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.btn--text_primary {
+  color: rgba(120, 88, 221);
+}
+
+.btn--text_white {
+  color: #fff;
+}
+
+.btn--bg_primary {
+  background-color: rgba(120, 88, 221);
+}
+
+.btn:hover {
+  color: rgba(0, 0, 0, .7);
+}
+
+.btn__hover:hover {
+  background-color: rgba(120, 88, 221);
+  border-color: rgba(120, 88, 221);
+  color: #fff;
+}

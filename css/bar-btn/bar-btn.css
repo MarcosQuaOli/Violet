@@ -1,0 +1,36 @@
+.bar-btn {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	transform: translateY(-50%);
+	height: 16px;
+  width: 30px;    	
+}
+
+.bar-btn__line {
+	position: absolute;
+	height: 3px;
+  border-radius: 10px;
+  width: 100%;
+  display: block;
+  background-color: #fff; 
+}
+
+.bar-btn__line:first-child {
+	top: 0;
+}
+
+.bar-btn__line:nth-child(2) {
+	top: 50%;
+}
+
+.bar-btn__line:last-child {
+	top: 100%;
+}
+
+@media (min-width: 768px) {
+	.bar-btn {
+		display: none;
+	}
+}

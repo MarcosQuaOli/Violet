@@ -1,0 +1,43 @@
+.box {
+  text-align: center;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgb(110, 110, 110);
+}
+
+.box__title {
+  text-transform: uppercase;
+  font-size: .9rem;
+  margin-top: 1rem;
+}
+
+.box__text {
+  line-height: 1.5rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+.box__progress {
+  margin-top: 1rem;
+  width: 100%;
+  height: 8px;
+  border-radius: 5px;
+  background-color: #ddd;
+}
+
+.box__porcent {
+  display: block;
+  width: 80%;
+  height: 8px;
+  border-radius: 5px;
+  background-color: #ffac1b;
+}
+
+.box__porcent--bg_primary {
+  background-color: #7fb7fa;
+}
+
+.box__porcent--bg_secondary {
+  background-color: #c99aff;
+}
