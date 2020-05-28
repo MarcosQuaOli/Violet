@@ -1,4 +1,6 @@
 @import "base.scss";
+@import "variables.scss";
+@import "mixins.scss";
 @import "header/header.scss";
 @import "module/grid.scss";
 @import "module/flex.scss";
@@ -14,3 +16,10 @@
 @import "module/box.scss";
 @import "client/client.scss";
 @import "gallery/gallery.scss";
+@import "slider/slider.scss";
+@import "swiper/swiper.scss";
+@import "module/overlay.scss";
+@import "team/team.scss";
+@import "brand/brand.scss";
+@import "blog/blog.scss";
+@import "contact/contact.scss";

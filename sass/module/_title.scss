@@ -4,6 +4,10 @@
   &__main {
     font-size: 2rem;
     text-transform: uppercase;
+
+    &--pb-2 {
+      padding-bottom: 2rem;
+    }
   }
   
   &__text {

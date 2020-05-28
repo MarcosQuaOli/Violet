@@ -1,13 +1,10 @@
 .client {
-  background: url(../../img/overview-background.png) no-repeat;
-  background-size: cover;
-	position: relative;
-  z-index: 1;
+  @include bg-img('../img/overview-background.png');
   color: #fff;
   text-align: center;
-}
-
-.client__text {
-  margin-top: 1rem;
-  font-size: 1.2rem;
+  
+  &__text {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+  }
 }

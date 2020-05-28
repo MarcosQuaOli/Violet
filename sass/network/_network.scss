@@ -1,11 +1,25 @@
-.network__link {
-  display: inline-block;
-  color: #fff;
-  font-size: 1.4rem;
-  margin-right: .5rem;
-  margin-left: .5rem;
-}
+.network {
+  &--pb-2 {
+    padding-bottom: 2rem;
+  }
 
-.network__link:hover {
-  color: rgba(255, 255, 255, .7);
+  &__link {
+    display: inline-block;
+    color: #fff;
+    font-size: 1.4rem;
+    margin-right: .5rem;
+    margin-left: .5rem;
+  
+    &:hover {
+      color: rgba(255, 255, 255, .7);
+    }
+    
+    &--text_gray {
+      color: #ddd;
+  
+      &:hover {
+        color: rgb(180, 180, 180);
+      }
+    }
+  }
 }

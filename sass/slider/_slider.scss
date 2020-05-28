@@ -1,0 +1,25 @@
+.slider {
+  @include bg-img('../img/slider-background.png');
+  color: #fff;
+  text-align: center;
+  line-height: 1.5rem;
+
+  &__rating {
+    padding: 2rem 0;
+  }
+
+  &__img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+  }
+
+  &__author {
+    font-size: 1.6rem;
+    margin: .6rem 0;
+  }
+
+  &__text {
+    margin: 1.5rem 0;
+  }
+}

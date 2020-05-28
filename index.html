@@ -4,14 +4,26 @@
 		<title>Violet</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-		<link rel="stylesheet" type="text/css" href="css/main.css">
-
+		
 		<!-- JQuery CDN -->
 		<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-
+		
 		<!-- FontAwesome CDN -->
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+		
+		<!-- Swiper CSS -->
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+		
+		<!-- Swiper JS -->
+		<script src="js/swiper.js"></script>
+
+		<!-- Css Customized -->
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+
+		<!-- JS Files -->
+		<script src="js/btn_menu.js"></script>
+		<script src="js/filter.js"></script>
+		
 	</head>
 	
 	<body class="page">
@@ -73,7 +85,7 @@
 
 			<div class="about__inner grid grid--col_2">
 				<div class="about__img">
-					<img src="img/about-me-image.png">
+					<img class="about__img" src="img/about-me-image.png">
 				</div>
 
 				<div class="about__content">
@@ -116,7 +128,7 @@
 						<img src="img/adobe-after-effects.png">
 						<h4 class="box__title">Adobe Photoshop</h4>
 						<div class="box__progress">
-							<span class="box__porcent box__porcent--bg_primary"></span>
+							<span class="box__porcent"></span>
 						</div>
 					</div>
 
@@ -124,7 +136,7 @@
 						<img src="img/adobe-illustrator.png">
 						<h4 class="box__title">Adobe Photoshop</h4>
 						<div class="box__progress">
-							<span class="box__porcent"></span>
+							<span class="box__porcent  box__porcent--bg_secondary"></span>
 						</div>
 					</div>
 
@@ -132,7 +144,7 @@
 						<img src="img/adobe-photoshop.png">
 						<h4 class="box__title">Adobe Photoshop</h4>
 						<div class="box__progress">
-							<span class="box__porcent box__porcent--bg_secondary"></span>
+							<span class="box__porcent box__porcent--bg_primary"></span>
 						</div>
 					</div>
 				</div>
@@ -221,492 +233,459 @@
 			</div>
 
 			<nav class="navbar--center">
-				<button class="btn btn__hover btn--size_sm" onclick="filterSelected('all')">All</button>
-				<button class="btn btn__hover btn--size_sm" onclick="filterSelected('development')">Development</button>
-				<button class="btn btn__hover btn--size_sm" onclick="filterSelected('design')">Design</button>
-				<button class="btn btn__hover btn--size_sm" onclick="filterSelected('html')">HTML</button>
-				<button class="btn btn__hover btn--size_sm" onclick="filterSelected('java')">Java</button>
+				<button class="portfolio__btn btn btn__hover btn--size_sm btn--on" onclick="filterSelection('all')">All</button>
+				<button class="portfolio__btn btn btn__hover btn--size_sm" onclick="filterSelection('development')">Development</button>
+				<button class="portfolio__btn btn btn__hover btn--size_sm" onclick="filterSelection('design')">Design</button>
+				<button class="portfolio__btn btn btn__hover btn--size_sm" onclick="filterSelection('html')">HTML</button>
+				<button class="portfolio__btn btn btn__hover btn--size_sm" onclick="filterSelection('java')">Java</button>
 			</nav>
 
-			<div class="gallery grid grid--col_3">
-				<div data-filter="all development design html">
+			<div class="gallery grid grid--gap-2 grid--col_3">
+				<div data-filter="all development design html" class="gallery__itens" >
 					<img class="gallery__img" src="img/portfolio-1.png">
 
-					<div>
-						<div>
-							<h4>Logo Designer</h4>
-							<p>Designer</p>
+					<div class="overlay">
+						<div class="overlay__text">
+							<h3>Logo Designer</h3>
+							<small>Designer</small>
 						</div>
 
-						<div>
-							<a href="#"><img src="img/search-icon.png"></a>
-						</div>
+						<a class="gallery__search-btn" href="#"><img src="img/search-icon.png"></a>
 					</div>
 				</div>
 
-				<div data-filter="all development html">
+				<div class="gallery__itens" data-filter="all development html">
 					<img class="gallery__img" src="img/portfolio-2.png">
 
-					<div>
-						<div>
-							<h4>Website Design</h4>
-							<p>Designer</p>
+					<div class="overlay">
+						<div class="overlay__text">
+							<h3>Website Design</h3>
+							<small>Designer</small>
 						</div>
 
-						<div>
-							<a href="#"><img src="img/search-icon.png"></a>
-						</div>
+						<a class="gallery__search-btn" href="#"><img src="img/search-icon.png"></a>
 					</div>
 				</div>
 
-				<div data-filter="all html">
+				<div class="gallery__itens" data-filter="all html">
 					<img class="gallery__img" src="img/portfolio-3.png">
 
-					<div>
-						<div>
-							<h4>Logo Designer</h4>
-							<p>Designer</p>
+					<div class="overlay">
+						<div class="overlay__text">
+							<h3>Logo Designer</h3>
+							<small>Designer</small>
 						</div>
 
-						<div>
-							<a href="#"><img src="img/search-icon.png"></a>
-						</div>
+						<a class="gallery__search-btn" href="#"><img src="img/search-icon.png"></a>
 					</div>
 				</div>
 
-				<div data-filter="all design java">
+				<div class="gallery__itens" data-filter="all design java">
 					<img class="gallery__img" src="img/portfolio-4.png">
 
-					<div>
-						<div>
-							<h4>Photography</h4>
-							<p>Photographer</p>
+					<div class="overlay">
+						<div class="overlay__text">
+							<h3>Photography</h3>
+							<small>Photographer</small>
 						</div>
 
-						<div>
-							<a href="#"><img src="img/search-icon.png"></a>
-						</div>
+						<a class="gallery__search-btn" href="#"><img src="img/search-icon.png"></a>
 					</div>
 				</div>
 
-				<div data-filter="all design java">
+				<div class="gallery__itens" data-filter="all design java">
 					<img class="gallery__img" src="img/portfolio-5.png">
 
-					<div>
-						<div>
-							<h4>Website Design</h4>
-							<p>Designer</p>
+					<div class="overlay">
+						<div class="overlay__text">
+							<h3>Website Design</h3>
+							<small>Designer</small>
 						</div>
 
-						<div>
-							<a href="#"><img src="img/search-icon.png"></a>
-						</div>
+						<a class="gallery__search-btn" href="#"><img src="img/search-icon.png"></a>
 					</div>
 				</div>
 
-				<div data-filter="all java">
+				<div class="gallery__itens" data-filter="all java">
 					<img class="gallery__img" src="img/portfolio-6.png">
 
-					<div>
-						<div>
-							<h4>Logo Designer</h4>
-							<p>Designer</p>
+					<div class="overlay">
+						<div class="overlay__text">
+							<h3>Logo Designer</h3>
+							<small>Designer</small>
 						</div>
 
-						<div>
-							<a href="#"><img src="img/search-icon.png"></a>
-						</div>
+						<a class="gallery__search-btn" href="#"><img src="img/search-icon.png"></a>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<section>
-			<div>
-				<div>
-					<img src="img/team-1.png">
-					<h4>Michael T. Hill</h4>
-					<small>Designer</small>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident
-					</p>
-					<i class="fas fa-star"></i>
-					<i class="fas fa-star"></i>
-					<i class="fas fa-star"></i>
-					<i class="fas fa-star"></i>
-					<i class="fas fa-star"></i>
-				</div>
+		<section class="slider page__bg_theme">
+			<div class="page__inner swiper-container">
+				<div class="page__section swiper-wrapper">
+					<div class="swiper-slide">
+						<img class="slider__img" src="img/team-1.png">
+						<h4 class="slider__author">Michael T. Hill</h4>
+						<small>Designer</small>
+						<p class="slider__text">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident
+						</p>
 
-				<div>
-					<img src="img/team-2.png">
-					<h4>Leonard D. Downing</h4>
-					<small>Photographer</small>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident
-					</p>
-					<i class="fas fa-star"></i>
-					<i class="fas fa-star"></i>
-					<i class="fas fa-star"></i>
-					<i class="fas fa-star"></i>
-					<i class="fas fa-star"></i>
-				</div>
+						<div class="slider__rating">
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+						</div>
+					</div>
 
-				<div>
-					<img src="img/team-3.png">
-					<h4>Paula R. Mullins</h4>
+					<div class="swiper-slide">
+						<img class="slider__img" src="img/team-2.png">
+						<h4 class="slider__author">Leonard D. Downing</h4>
+						<small>Photographer</small>
+						<p class="slider__text">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident
+						</p>
+						
+						<div class="slider__rating">
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+						</div>
+					</div>
+
+					<div class="swiper-slide">
+					<img class="slider__img" src="img/team-3.png">
+					<h4 class="slider__author">Paula R. Mullins</h4>
 					<small>Designer</small>
-					<p>
+					<p class="slider__text">
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident
 					</p>
-					<i class="fas fa-star"></i>
-					<i class="fas fa-star"></i>
-					<i class="fas fa-star"></i>
-					<i class="fas fa-star"></i>
-					<i class="fas fa-star"></i>
+					
+					<div class="slider__rating">
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+					</div>
 				</div>
 			</div>
 
-			<div>
-				<span>1</span>
-				<span>2</span>
-				<span>3</span>
+			<!-- Add Pagination -->
+			<div class="swiper-pagination"></div>
 			</div>
 		</section>
 
-		<section>
-			<div>
-				<h3>My Team</h3>
+		<section id="team" class="page__inner page__section">
+			<div class="title">
+				<h3 class="title__main">My Team</h3>
 				<img src="img/title-style.png">
-				<p>
+				<p class="title__text">
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 				</p>
 			</div>
 
-			<div>
-				<div>
+			<div class="grid grid--gap-2 grid--col_4">
+				<div class="team box">
 					<div>
-						<img src="img/team-1.png">
-						<div>
+						<img class="team__img" src="img/team-1.png">
+						<div class="team__content">
 							<h4>Violet R. Peters</h4>
-							<p>Founder</p>
+							<small>Founder</small>
 						</div>
 					</div>
 
-					<div>
-						<div>
+					<div class="team__overlay overlay">
+						<div class="box__title">
 							<h4>Violet R. Peters</h4>
-							<p>Founder</p>
+							<small>Founder</small>
 						</div>
 
-						<div>
-							<div>
-								<p>Adobe Photoshop</p><span>90%</span>
-							</div>
-
-							<div>
-								<div>
-									<span></span>
-									<span></span>
-								</div>
-							</div>
-
-							<div>
-								<p>Adobe Ilustrator</p><span>80%</span>
-							</div>
-
-							<div>
-								<div>
-									<span></span>
-									<span></span>
-								</div>
-							</div>
-
-							<div>
-								<p>After Effect</p><span>70%</span>
-							</div>
-
-							<div>
-								<div>
-									<span></span>
-									<span></span>
-								</div>
-							</div>	
+						<div class="team__skill team__skill--w_90 flex">
+							<p>Adobe Photoshop</p><span>90%</span>
 						</div>
 
-						<div>
-							<a href="#"><i class="fab fa-facebook-f"></i></a>
-							<a href="#"><i class="fab fa-twitter"></i></a>
-							<a href="#"><i class="fab fa-dribbble"></i></a>
+						<div class="box__progress">
+							<div class="box__porcent box__porcent--w_90"></div>
+						</div>
+
+						<div class="team__skill team__skill--w_80 flex">
+							<p>Adobe Ilustrator</p><span>80%</span>
+						</div>
+
+						<div class="box__progress">
+							<div class="box__porcent"></div>
+						</div>
+
+						<div class="team__skill team__skill--w_70 flex">
+							<p>After Effect</p><span>70%</span>
+						</div>
+
+						<div class="box__progress">
+							<div class="box__porcent box__porcent--w_70"></div>
+						</div>	
+
+						<div class="team__network network">
+							<a class="network__link network__link--text_gray" href="#"><i class="fab fa-facebook-f"></i></a>
+							<a class="network__link network__link--text_gray" href="#"><i class="fab fa-twitter"></i></a>
+							<a class="network__link network__link--text_gray" href="#"><i class="fab fa-dribbble"></i></a>
 						</div>
 					</div>
 				</div>
 
-				<div>
+				<div class="team box">
 					<div>
-						<img src="img/team-2.png">
-						<div>
+						<img class="team__img" src="img/team-2.png">
+						<div class="team__content">
 							<h4>Violet R. Peters</h4>
-							<p>Founder</p>
+							<small>Founder</small>
 						</div>
 					</div>
 
-					<div>
-						<div>
+					<div class="team__overlay overlay">
+						<div class="box__title">
 							<h4>Violet R. Peters</h4>
-							<p>Founder</p>
+							<small>Founder</small>
 						</div>
 
-						<div>
-							<div>
-								<p>Adobe Photoshop</p><span>90%</span>
-							</div>
-
-							<div>
-								<div>
-									<span></span>
-									<span></span>
-								</div>
-							</div>
-
-							<div>
-								<p>Adobe Ilustrator</p><span>80%</span>
-							</div>
-
-							<div>
-								<div>
-									<span></span>
-									<span></span>
-								</div>
-							</div>
-
-							<div>
-								<p>After Effect</p><span>70%</span>
-							</div>
-
-							<div>
-								<div>
-									<span></span>
-									<span></span>
-								</div>
-							</div>	
+						<div class="team__skill team__skill--w_90 flex">
+							<p>Adobe Photoshop</p><span>90%</span>
 						</div>
 
-						<div>
-							<a href="#"><i class="fab fa-facebook-f"></i></a>
-							<a href="#"><i class="fab fa-twitter"></i></a>
-							<a href="#"><i class="fab fa-dribbble"></i></a>
+						<div class="box__progress">
+							<div class="box__porcent box__porcent--w_90"></div>
+						</div>
+
+						<div class="team__skill team__skill--w_80 flex">
+							<p>Adobe Ilustrator</p><span>80%</span>
+						</div>
+
+						<div class="box__progress">
+							<div class="box__porcent"></div>
+						</div>
+
+						<div class="team__skill team__skill--w_70 flex">
+							<p>After Effect</p><span>70%</span>
+						</div>
+
+						<div class="box__progress">
+							<div class="box__porcent box__porcent--w_70"></div>
+						</div>	
+
+						<div class="team__network network">
+							<a class="network__link network__link--text_gray" href="#"><i class="fab fa-facebook-f"></i></a>
+							<a class="network__link network__link--text_gray" href="#"><i class="fab fa-twitter"></i></a>
+							<a class="network__link network__link--text_gray" href="#"><i class="fab fa-dribbble"></i></a>
 						</div>
 					</div>
 				</div>
 
-				<div>
+				<div class="team box">
 					<div>
-						<img src="img/team-3.png">
-						<div>
+						<img class="team__img" src="img/team-3.png">
+						<div class="team__content">
 							<h4>Violet R. Peters</h4>
-							<p>Founder</p>
+							<small>Founder</small>
 						</div>
 					</div>
 
-					<div>
-						<div>
+					<div class="team__overlay overlay">
+						<div class="box__title">
 							<h4>Violet R. Peters</h4>
-							<p>Founder</p>
+							<small>Founder</small>
 						</div>
 
-						<div>
-							<div>
-								<p>Adobe Photoshop</p><span>90%</span>
-							</div>
-
-							<div>
-								<div>
-									<span></span>
-									<span></span>
-								</div>
-							</div>
-
-							<div>
-								<p>Adobe Ilustrator</p><span>80%</span>
-							</div>
-
-							<div>
-								<div>
-									<span></span>
-									<span></span>
-								</div>
-							</div>
-
-							<div>
-								<p>After Effect</p><span>70%</span>
-							</div>
-
-							<div>
-								<div>
-									<span></span>
-									<span></span>
-								</div>
-							</div>		
+						<div class="team__skill team__skill--w_90 flex">
+							<p>Adobe Photoshop</p><span>90%</span>
 						</div>
 
-						<div>
-							<a href="#"><i class="fab fa-facebook-f"></i></a>
-							<a href="#"><i class="fab fa-twitter"></i></a>
-							<a href="#"><i class="fab fa-dribbble"></i></a>
+						<div class="box__progress">
+							<div class="box__porcent box__porcent--w_90"></div>
+						</div>
+
+						<div class="team__skill team__skill--w_80 flex">
+							<p>Adobe Ilustrator</p><span>80%</span>
+						</div>
+
+						<div class="box__progress">
+							<div class="box__porcent"></div>
+						</div>
+
+						<div class="team__skill team__skill--w_70 flex">
+							<p>After Effect</p><span>70%</span>
+						</div>
+
+						<div class="box__progress">
+							<div class="box__porcent box__porcent--w_70"></div>
+						</div>	
+
+						<div class="team__network network">
+							<a class="network__link network__link--text_gray" href="#"><i class="fab fa-facebook-f"></i></a>
+							<a class="network__link network__link--text_gray" href="#"><i class="fab fa-twitter"></i></a>
+							<a class="network__link network__link--text_gray" href="#"><i class="fab fa-dribbble"></i></a>
 						</div>
 					</div>
 				</div>
 
-				<div>
+				<div class="team box">
 					<div>
-						<img src="img/team-2.png">
-						<div>
+						<img class="team__img" src="img/team-2.png">
+						<div class="team__content">
 							<h4>Violet R. Peters</h4>
-							<p>Founder</p>
+							<small>Founder</small>
 						</div>
 					</div>
 
-					<div>
-						<div>
+					<div class="team__overlay overlay">
+						<div class="box__title">
 							<h4>Violet R. Peters</h4>
-							<p>Founder</p>
+							<small>Founder</small>
 						</div>
 
-						<div>
-							<div>
-								<p>Adobe Photoshop</p><span>90%</span>
-							</div>
-
-							<div>
-								<div>
-									<span></span>
-									<span></span>
-								</div>
-							</div>
-
-							<div>
-								<p>Adobe Ilustrator</p><span>80%</span>
-							</div>
-
-							<div>
-								<div>
-									<span></span>
-									<span></span>
-								</div>
-							</div>
-
-							<div>
-								<p>After Effect</p><span>70%</span>
-							</div>
-
-							<div>
-								<div>
-									<span></span>
-									<span></span>
-								</div>
-							</div>								
+						<div class="team__skill team__skill--w_90 flex">
+							<p>Adobe Photoshop</p><span>90%</span>
 						</div>
 
-						<div>
-							<a href="#"><i class="fab fa-facebook-f"></i></a>
-							<a href="#"><i class="fab fa-twitter"></i></a>
-							<a href="#"><i class="fab fa-dribbble"></i></a>
+						<div class="box__progress">
+							<div class="box__porcent box__porcent--w_90"></div>
+						</div>
+
+						<div class="team__skill team__skill--w_80 flex">
+							<p>Adobe Ilustrator</p><span>80%</span>
+						</div>
+
+						<div class="box__progress">
+							<div class="box__porcent"></div>
+						</div>
+
+						<div class="team__skill team__skill--w_70 flex">
+							<p>After Effect</p><span>70%</span>
+						</div>
+
+						<div class="box__progress">
+							<div class="box__porcent box__porcent--w_70"></div>
+						</div>	
+
+						<div class="team__network network">
+							<a class="network__link network__link--text_gray" href="#"><i class="fab fa-facebook-f"></i></a>
+							<a class="network__link network__link--text_gray" href="#"><i class="fab fa-twitter"></i></a>
+							<a class="network__link network__link--text_gray" href="#"><i class="fab fa-dribbble"></i></a>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<section>
-			<img src="img/brand-1.png">
-			<img src="img/brand-2.png">
-			<img src="img/brand-3.png">
-			<img src="img/brand-4.png">
-			<img src="img/brand-1.png">
+		<section class="brand page__bg_theme page__section">
+			<div class="grid grid--justify-center grid--col-5 page__inner">
+				<img class="grid__itens" src="img/brand-1.png">
+				<img class="grid__itens" src="img/brand-2.png">
+				<img class="grid__itens" src="img/brand-3.png">
+				<img class="grid__itens" src="img/brand-4.png">
+				<img class="grid__itens" src="img/brand-1.png">
+			</div>				
 		</section>
 
-		<section>
-			<div>
-				<h3>Blog Post</h3>
+		<section id="blog" class="page__inner page__section">
+			<div class="title">
+				<h3 class="title__main">Blog Post</h3>
 				<img src="img/title-style.png">
-				<p>
+				<p class="title__text">
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 				</p>
 			</div>
 
-			<div>
-				<div>
-					<img src="img/blog-1.png">
+			<div class="blog grid grid--gap-2 grid--col_3">
+				<div class="blog__itens box">
+					<img class="blog__img" src="img/blog-1.png">
 
-					<p>
-						<time>May 25, 2017</time>
-						<i class="fas fa-comments"></i><span>5</span>
-					</p>
-
-					<h3><a href="#">Headline latest world news</a></h3>
-
-					<p>
-						orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore Ut enim ad minim veniam<a href="#">Read more</a>...
-					</p>
+					<div class="blog__content">
+						<p class="blog__time flex">
+							<time>May 25, 2017</time>
+							<i class="fas fa-comments"><span class="blog__comments">5</span></i>
+						</p>
+	
+						<h3><a class="blog__title box__title" href="#">Headline latest world news</a></h3>
+	
+						<p>
+							orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt 
+							ut labore et dolore Ut enim ad minim veniam<a class="blog__more" href="#"> Read more</a>...
+						</p>
+					</div>
 				</div>
 
-				<div>
-					<img src="img/blog-2.png">
-					<p>
-						<time>May 25, 2017</time>
-						<i class="fas fa-comments"></i><span>5</span>							
-					</p>
-
-					<h3><a href="#">Headline latest world news</a></h3>
-
-					<p>
-						orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore Ut enim ad minim veniam<a href="#">Read more</a>...
-					</p>
+				<div class="blog__itens box">
+					<img class="blog__img" src="img/blog-2.png">
+					
+					<div class="blog__content">
+						<p class="blog__time flex">
+							<time>May 25, 2017</time>
+							<i class="fas fa-comments"><span class="blog__comments">5</span></i>
+						</p>
+	
+						<h3><a class="blog__title box__title" href="#">Headline latest world news</a></h3>
+	
+						<p>
+							orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt 
+							ut labore et dolore Ut enim ad minim veniam<a class="blog__more" href="#"> Read more</a>...
+						</p>
+					</div>
 				</div>
 
-				<div>
-					<img src="img/blog-3.png">
-					<p>
-						<time>May 25, 2017</time>
-						<i class="fas fa-comments"></i><span>5</span>
-					</p>
-
-					<h3><a href="#">Headline latest world news</a></h3>
-
-					<p>
-						orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore Ut enim ad minim veniam<a href="#">Read more</a>...
-					</p>
+				<div class="blog__itens box">
+					<img class="blog__img" src="img/blog-3.png">
+					
+					<div class="blog__content">
+						<p class="blog__time flex">
+							<time>May 25, 2017</time>
+							<i class="fas fa-comments"><span class="blog__comments">5</span></i>
+						</p>
+	
+						<h3><a class="blog__title box__title" href="#">Headline latest world news</a></h3>
+	
+						<p>
+							orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt 
+							ut labore et dolore Ut enim ad minim veniam<a class="blog__more" href="#"> Read more</a>...
+						</p>
+					</div>
 				</div>
 			</div>
 		</section>
 
-		<section>
-			<h3>Obela</h3>
+		<section id="contact" class="contact page__section page__bg-dark">
+			<h3 class="title__main title__main--pb-2">Obela</h3>
 
-			<div>
+			<div class="grid grid--col_3">
 				<p>
-					<a href="#"><i class="fas fa-phone-alt"><span>Hotline(+123) 45 67 89 21</span></a></i>
+					<a class="title--text_white" href="#"><i class="fa fa-phone" aria-hidden="true"><span class="contact__icon">Hotline(+123) 45 67 89 21</span></a></i>
 				</p>
 
 				<p>
-					<a href="#"><i class="fas fa-envelope"><span>sshahriar458@gmail.com</span></a></i>
+					<a class="title--text_white" href="#"><i class="fas fa-envelope"><span class="contact__icon">sshahriar458@gmail.com</span></a></i>
 				</p>
 
 				<p>
-					<a href="#"><i class="fas fa-map-marker-alt"><span>DartThemes address goes here.</span></a></i>
+					<a class="title--text_white" href="#"><i class="fas fa-map-marker-alt"><span class="contact__icon">DartThemes address goes here.</span></a></i>
 				</p>
 			</div>
 		</section>
 
-		<footer>
-			<div>
-				<a href="#"><i class="fab fa-facebook-f"></i></a>
-				<a href="#"><i class="fab fa-twitter"></i></a>
-				<a href="#"><i class="fab fa-behance"></i></a>
-				<a href="#"><i class="fab fa-dribbble"></i></a>
+		<footer class="page__section page__bg-dark page--center">
+			<div class="network--pb-2">
+				<a class="network__link" href="#"><i class="fab fa-facebook-f"></i></a>
+				<a class="network__link" href="#"><i class="fab fa-twitter"></i></a>
+				<a class="network__link" href="#"><i class="fab fa-behance"></i></a>
+				<a class="network__link" href="#"><i class="fab fa-dribbble"></i></a>
 			</div>
 				
-			<p>Copyright © 2017 DartThemes , All Rights Reserved.</p>
+			<p class="title--text_white">Copyright © 2017 DartThemes , All Rights Reserved.</p>
 		</footer>
+
+		<script src="js/swiper.min.js" defer></script>
 	</body>
 </html>

@@ -1,16 +1,10 @@
 .banner {
-  background: url(../../img/header-background.png) no-repeat;
-  background-size: cover;
-	position: relative;
-  z-index: 1;
+  @include bg-img('../img/header-background.png');
   height: 100vh;
   text-align: center;
 
   &__content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    @include centralizar;
     color: #fff;
     text-transform: uppercase;  
   }
@@ -32,12 +26,6 @@
       font-size: .9rem;
       font-weight: bold;
     }
-  }
-  
-  &__link {
-    margin-top: 1rem;
-    background-color: #fff;
-    color: rgb(120, 88, 221);
   }
   
   &__network {

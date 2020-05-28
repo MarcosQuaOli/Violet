@@ -1,0 +1,44 @@
+.team {
+  position: relative;
+  padding: 0;
+  text-align: left;
+
+  &__overlay {
+    padding: 1rem;
+    background-color: #fff;    
+  }
+
+  &__skill {
+    font-size: .7rem;
+    margin-top: .5rem;
+
+    &--w_90 {
+      width: 90%;
+    }
+
+    &--w_80 {
+      width: 80%;
+    }
+
+    &--w_70 {
+      width: 70%;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    display: block;
+  }
+
+  &__content {
+    padding: .5rem;
+    text-transform: uppercase;
+    line-height: 1.5rem;
+  }
+
+  &__network {
+    margin-top: 10%;
+    padding-top: .5rem;
+    border-top: 1px solid #ddd;
+  }
+}
