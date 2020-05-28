@@ -1,0 +1,17 @@
+.title {
+  text-align: center;
+  
+  &__main {
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
+  
+  &__text {
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+  }
+  
+  &--text_white {
+    color: #fff;
+  }
+}

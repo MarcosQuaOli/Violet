@@ -1,0 +1,10 @@
+.title {
+  text-align: center; }
+  .title__main {
+    font-size: 2rem;
+    text-transform: uppercase; }
+  .title__text {
+    margin-top: 2rem;
+    margin-bottom: 4rem; }
+  .title--text_white {
+    color: #fff; }
