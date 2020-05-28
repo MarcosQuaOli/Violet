@@ -1,0 +1,48 @@
+.banner {
+  background: url(../../img/header-background.png) no-repeat;
+  background-size: cover;
+	position: relative;
+  z-index: 1;
+  height: 100vh;
+  text-align: center;
+
+  &__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-transform: uppercase;  
+  }
+  
+  &__title {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  }
+  
+  &__subtitle {
+    display: inline-block;
+  }
+  
+  &__skills {
+    margin: 1.5rem 0;
+
+    &_line {
+      margin: .5rem;
+      font-size: .9rem;
+      font-weight: bold;
+    }
+  }
+  
+  &__link {
+    margin-top: 1rem;
+    background-color: #fff;
+    color: rgb(120, 88, 221);
+  }
+  
+  &__network {
+    position: absolute;
+    bottom: 30px;
+    right: 50px;
+  }
+}

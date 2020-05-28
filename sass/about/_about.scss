@@ -1,0 +1,28 @@
+.about {
+  &__img {
+    text-align: center;
+  }
+
+  &__content {
+    padding-top: 2rem;
+  }
+  
+  &__text {
+    line-height: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+  
+  &__self {
+    padding-top: 1.5rem;
+    margin-bottom: 3rem;
+    border-top: 1px dashed rgb(206, 199, 199);
+  }
+  
+  &__person {
+    display: inline-block;
+    margin-top: .2rem;
+    margin-bottom: .2rem;
+    margin-right: .5rem;
+    text-transform: uppercase;
+  }
+}
