@@ -37,7 +37,7 @@
     background-color: #27353b;
   }
   
-  &__bg_theme::before {
+  &__bg-theme::before {
     content: '';
     @include overlay;
     background-color: rgba(120, 88, 221, .8);

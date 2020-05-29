@@ -5,34 +5,22 @@ $(document).ready(() => {
 		$(this).toggleClass('btn--on'); 
 	});
 
-	filterSelection("all");
+	filtering("all");
+
+	$('[data-target]').click((e) => { 
+		let target = $(e.target).attr('data-target');
+
+		filtering(target);
+	});
 
 	// Função para filtrar as imagens que serão selecionadas
-	function filterSelection(c) {				
+	function filtering(target) {				
 		$('[data-filter~="all"]').each(function() {
 			let filter = $(this).attr('data-filter').split(" ");
 
-			let filterType = filter.some((e) => {return e === c});
+			let filterType = filter.some((e) => {return e === target});
 
-			if(filterType) {
-				$(this).animate({
-					opacity: 1,
-					visibility: 'visible',
-				}, {
-					complete: () => { 
-						$(this).css('display', 'block');
-					}
-				});
-			} else {
-				$(this).animate({
-					opacity: 0,
-					visibility: 'hidden',
-				}, {
-					complete: () => { 
-						$(this).css('display', 'none');
-					}
-				});
-			}
+			(filterType) ? $(this).show(1000) : $(this).hide(800);			
 		});
 	} 
 })

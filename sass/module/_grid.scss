@@ -15,7 +15,7 @@
   }  
 
   @media (min-width: 576px) {
-    &--col_4 {
+    &--col-4 {
       grid-template-columns: 1fr 1fr;
     }
   }
@@ -27,15 +27,15 @@
   }
   
   @media (min-width: 992px) {  
-    &--col_2 {
+    &--col-2 {
       grid-template-columns: 1fr 1fr;
     }
 
-    &--col_3 {
+    &--col-3 {
       grid-template-columns: repeat(3, 1fr);
     }  
 
-    &--col_4 {
+    &--col-4 {
       grid-template-columns: repeat(4, 1fr);
     }
   }

@@ -10,24 +10,24 @@
   color: #000;
   cursor: pointer;
 
-  &--size_sm {
+  &--size-sm {
     padding: .5rem 1rem;
   }
   
-  &--size_md {
+  &--size-md {
     padding-left: 3rem;
     padding-right: 3rem;
   }
   
-  &--text_primary {
+  &--text-primary {
     color: $color-primary;
   }
   
-  &--text_white {
+  &--text-white {
     color: #fff;
   }
   
-  &--bg_primary {
+  &--bg-primary {
     background-color: $color-primary;
   }
   
